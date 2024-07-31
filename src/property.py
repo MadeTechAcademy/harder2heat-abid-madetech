@@ -9,8 +9,6 @@ class Property:
         self.uprn = uprn
         self.connectivity = None
         self.material = None
-        self.long = None
-        self.lat = None
 
     # def calculate_score(self):
     #     score = 0
