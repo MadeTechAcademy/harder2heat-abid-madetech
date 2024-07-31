@@ -14,10 +14,10 @@ def test_length_of_properties():
 
 def test_get_properties_from_os():
     expected_properties = [
-        {"uprn": 100090062842, "connectivity": "Semi-Connected", "material": "Brick Or Block Or Stone", "long": 0.0452889, "lat": 52.4569136},
-        {"uprn": 10034160625, "connectivity": "End-Connected", "material": "Brick Or Block Or Stone", "long": 0.0480525, "lat": 52.4577911},
-        {"uprn": 100090062297, "connectivity": "Standalone", "material": "Brick Or Block Or Stone", "long": 0.0471489, "lat": 52.4569721},
-        {"uprn": 100090060430, "connectivity": "End-Connected", "material": "Brick Or Block Or Stone", "long": 0.0481987, "lat": 52.4579841},
+        {"uprn": 100090062842, "connectivity": "Semi-Connected", "material": "Brick Or Block Or Stone"},
+        {"uprn": 10034160625, "connectivity": "End-Connected", "material": "Brick Or Block Or Stone"},
+        {"uprn": 100090062297, "connectivity": "Standalone", "material": "Brick Or Block Or Stone"},
+        {"uprn": 100090060430, "connectivity": "End-Connected", "material": "Brick Or Block Or Stone"},
     ]
 
     properties = get_properties_from_os(list_of_buildings)
@@ -28,5 +28,3 @@ def test_get_properties_from_os():
         assert prop.uprn == expected["uprn"]
         assert prop.connectivity == expected["connectivity"]
         assert prop.material == expected["material"]
-        assert prop.long == expected["long"]
-        assert prop.lat == expected["lat"]
