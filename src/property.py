@@ -3,19 +3,14 @@ MINIMUM_FAILING_AGE = 1959
 COLD_CONNECTIVITY = "Standalone"
 WARM_MATERIALS = ["Brick Or Block Or Stone", "Contrete"]
 
-class Property():
+
+class Property:
     def __init__(self, uprn):
         self.uprn = uprn
-        # self.epc_rating = ''
-        # self.epc_score = ''
-        # self.address = ''
-        # self.age = 0
-        # self.connectivity = ''
-        # self.material = ''
-        # self.score = 0
-        # self.void = False
-        # self.long = 0
-        # self.lat = 0
+        self.connectivity = None
+        self.material = None
+        self.long = None
+        self.lat = None
 
     # def calculate_score(self):
     #     score = 0
@@ -31,7 +26,7 @@ class Property():
 
     #     self.score = score
     #     return score
-    
+
     # def handle_age_string(self):
     #     if self.age == "Unknown":
     #         self.age = MINIMUM_FAILING_AGE
