@@ -20,8 +20,6 @@ def test_get_properties_from_os():
         {"uprn": 100090060430, "connectivity": "End-Connected", "material": "Brick Or Block Or Stone"},
     ]
 
-    properties = get_properties_from_os(list_of_buildings)
-
     assert len(properties) == len(expected_properties)
 
     for prop, expected in zip(properties, expected_properties):
