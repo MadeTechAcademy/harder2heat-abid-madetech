@@ -9,7 +9,6 @@ def get_properties_from_os(list_of_buildings):
         for j in range(len(uprn_array)):
             new_prop = Property(uprn_array[j]["uprn"])
             new_prop.connectivity = building["connectivity"]
-            new_prop.material = building["constructionmaterial"]
             list_of_properties.append(new_prop)
 
     return list_of_properties

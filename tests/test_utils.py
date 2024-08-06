@@ -14,10 +14,10 @@ def test_length_of_properties():
 
 def test_get_properties_from_os():
     expected_properties = [
-        {"uprn": 100090062842, "connectivity": "Semi-Connected", "material": "Brick Or Block Or Stone"},
-        {"uprn": 10034160625, "connectivity": "End-Connected", "material": "Brick Or Block Or Stone"},
-        {"uprn": 100090062297, "connectivity": "Standalone", "material": "Brick Or Block Or Stone"},
-        {"uprn": 100090060430, "connectivity": "End-Connected", "material": "Brick Or Block Or Stone"},
+        {"uprn": 100090062842, "connectivity": "Semi-Connected"},
+        {"uprn": 10034160625, "connectivity": "End-Connected"},
+        {"uprn": 100090062297, "connectivity": "Standalone"},
+        {"uprn": 100090060430, "connectivity": "End-Connected"},
     ]
 
     assert len(properties) == len(expected_properties)
@@ -25,4 +25,3 @@ def test_get_properties_from_os():
     for prop, expected in zip(properties, expected_properties):
         assert prop.uprn == expected["uprn"]
         assert prop.connectivity == expected["connectivity"]
-        assert prop.material == expected["material"]

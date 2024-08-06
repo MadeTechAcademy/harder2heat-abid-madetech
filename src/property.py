@@ -8,7 +8,6 @@ class Property:
     def __init__(self, uprn):
         self.uprn = uprn
         self.connectivity = None
-        self.material = None
 
     # def calculate_score(self):
     #     score = 0
