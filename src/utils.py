@@ -10,6 +10,8 @@ def get_properties_from_os(list_of_buildings):
             new_prop = Property(uprn_array[j]["uprn"])
             new_prop.connectivity = building["connectivity"]
             new_prop.osid = building["osid"]
+            new_prop.coordinates = list_of_buildings[i]["geometry"]["coordinates"]
+
             list_of_properties.append(new_prop)
 
     return list_of_properties
