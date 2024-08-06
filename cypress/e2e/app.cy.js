@@ -4,6 +4,7 @@ describe('My Flask App', () => {
   });
 
   it('Should render the index page', () => {
+    cy.title().should('eq', 'Harder 2 Heat');
     cy.get('body p').contains('Properties : 4');
   })
 
