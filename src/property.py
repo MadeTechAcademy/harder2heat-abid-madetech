@@ -8,6 +8,10 @@ class Property:
     def __init__(self, uprn):
         self.uprn = uprn
         self.connectivity = None
+        self.coordinates = None
+        self.osid = None
+        self.property_size = None
+        self.age_updated_date = None
 
     # def calculate_score(self):
     #     score = 0
