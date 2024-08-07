@@ -13,3 +13,5 @@ def test_property_properties():
 def test_modify_connectivity_description():
     prop = Property(000)
     assert prop.modify_connectivity_description("Standalone") == "Free-Standing"
+    assert prop.modify_connectivity_description("Semi-Detached") == "Single Connected"
+    assert prop.modify_connectivity_description("End Connected") == "Dual-Connected"
