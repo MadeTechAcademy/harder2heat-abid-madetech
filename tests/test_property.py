@@ -10,8 +10,9 @@ def test_property_properties():
     assert prop.property_size is None
     assert prop.age_updated_date is None
 
+
 def test_modify_connectivity_description():
     prop = Property(000)
     assert prop.modify_connectivity_description("Standalone") == "Free-Standing"
-    assert prop.modify_connectivity_description("Semi-Detached") == "Single Connected"
-    assert prop.modify_connectivity_description("End Connected") == "Dual-Connected"
+    assert prop.modify_connectivity_description("Semi-Connected") == "Single Connected"
+    assert prop.modify_connectivity_description("End-Connected") == "Dual-Connected"

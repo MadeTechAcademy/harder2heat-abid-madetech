@@ -17,8 +17,8 @@ class Property:
     def modify_connectivity_description(connectivity_description):
         correct_descriptions = {
             'Standalone': 'Free-Standing',
-            'Semi-Detached': 'Single Connected',
-            'End Connected': 'Dual-Connected'
+            'Semi-Connected': 'Single Connected',
+            'End-Connected': 'Dual-Connected'
         }
 
         return correct_descriptions.get(connectivity_description)
