@@ -1,5 +1,6 @@
 from src.property import Property
 
+
 def get_properties_from_os(list_of_buildings):
     list_of_properties = []
     for i in range(len(list_of_buildings)):
@@ -15,14 +16,3 @@ def get_properties_from_os(list_of_buildings):
             list_of_properties.append(new_prop)
 
     return list_of_properties
-
-            
-
-
-
-
-
-
-
-
-
