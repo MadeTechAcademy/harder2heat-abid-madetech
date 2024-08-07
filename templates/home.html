@@ -15,29 +15,22 @@
 {#      <th scope="col">#</th>#}
       <th scope="col">OSID</th>
       <th scope="col">Building Coordinates</th>
-      <th scope="col">Building Size</th>
+      <th scope="col">Size</th>
       <th scope="col">Building Age Updated Date</th>
       <th scope="col">Connectivity</th>
     </tr>
   </thead>
   <tbody>
-{#    <tr>#}
-{#      <th scope="row">1</th>#}
-{#      <td>Mark</td>#}
-{#      <td>Otto</td>#}
-{#      <td>@mdo</td>#}
-{#    </tr>#}
-{#    <tr>#}
-{#      <th scope="row">2</th>#}
-{#      <td>Jacob</td>#}
-{#      <td>Thornton</td>#}
-{#      <td>@fat</td>#}
-{#    </tr>#}
-{#    <tr>#}
-{#      <th scope="row">3</th>#}
-{#      <td colspan="2">Larry the Bird</td>#}
-{#      <td>@twitter</td>#}
-{#    </tr>#}
+  {% for property in properties %}
+            <tr>
+{#                <th scope="row">1</th>#}
+                <td>{{ property.osid }}</td>
+                <td>Dummy data</td>
+                <td>{{ property.size }}</td>
+                <td>{{ property.age_updated_date }}</td>
+                <td>{{ property.connectivity }}</td>
+            </tr>
+  {% endfor %}
   </tbody>
 </table>
 </body>
