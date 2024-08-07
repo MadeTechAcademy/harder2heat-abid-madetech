@@ -10,7 +10,7 @@ with open('properties.json') as json_properties:
 
 expected_properties = [
     {"uprn": 100090062842, "connectivity": "Single Connected", "osid": "02ae4ae4-6119-4d72-aef9-e56013d25e0d",
-     "age_updated_date": "2024-05-20",
+     "age_updated_date": "2024-05-20", "size": 111.601,
      "coordinates": [
          [
              [
@@ -60,7 +60,7 @@ expected_properties = [
          ]
      ]},
     {"uprn": 10034160625, "connectivity": "Dual-Connected", "osid": "04f8e016-647e-40e6-bb06-bff6fbea3468",
-     "age_updated_date": "2024-03-13",
+     "age_updated_date": "2024-03-13", "size": 32.081,
      "coordinates": [
          [
              [
@@ -86,7 +86,7 @@ expected_properties = [
          ]
      ]},
     {"uprn": 100090062297, "connectivity": "Free-Standing", "osid": "0b1107e5-00f8-4d89-b6ae-67f0f98a6517",
-     "age_updated_date": "2024-03-13",
+     "age_updated_date": "2024-03-13", "size": 120.143,
      "coordinates": [
          [
              [
@@ -160,7 +160,7 @@ expected_properties = [
          ]
      ]},
     {"uprn": 100090060430, "connectivity": "Dual-Connected", "osid": "1384ef24-2e6e-49a2-906f-af35fc12713e",
-     "age_updated_date": "2024-03-13",
+     "age_updated_date": "2024-03-13", "size": 38.253,
      "coordinates": [
          [
              [
@@ -202,3 +202,4 @@ def test_get_properties_from_os():
         assert prop.osid == expected["osid"]
         assert prop.coordinates == expected["coordinates"]
         assert prop.age_updated_date == expected["age_updated_date"]
+        assert prop.size == expected["size"]

@@ -12,6 +12,7 @@ def get_properties_from_os(list_of_buildings):
             new_prop.osid = building["osid"]
             new_prop.coordinates = list_of_buildings[i]["geometry"]["coordinates"]
             new_prop.age_updated_date = building["buildingage_updatedate"]
+            new_prop.size = building["geometry_area_m2"]
 
             list_of_properties.append(new_prop)
 

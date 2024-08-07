@@ -10,7 +10,7 @@ class Property:
         self.connectivity = None
         self.coordinates = None
         self.osid = None
-        self.property_size = None
+        self.size = None
         self.age_updated_date = None
 
     @staticmethod
