@@ -9,7 +9,7 @@ with open('properties.json') as json_properties:
     properties = get_properties_from_os(list_of_buildings)
 
 expected_properties = [
-    {"uprn": 100090062842, "connectivity": "Semi-Connected", "osid": "02ae4ae4-6119-4d72-aef9-e56013d25e0d",
+    {"uprn": 100090062842, "connectivity": "Single Connected", "osid": "02ae4ae4-6119-4d72-aef9-e56013d25e0d",
      "age_updated_date": "2024-05-20",
      "coordinates": [
          [
@@ -59,7 +59,7 @@ expected_properties = [
              ]
          ]
      ]},
-    {"uprn": 10034160625, "connectivity": "End-Connected", "osid": "04f8e016-647e-40e6-bb06-bff6fbea3468",
+    {"uprn": 10034160625, "connectivity": "Dual-Connected", "osid": "04f8e016-647e-40e6-bb06-bff6fbea3468",
      "age_updated_date": "2024-03-13",
      "coordinates": [
          [
@@ -85,7 +85,7 @@ expected_properties = [
              ]
          ]
      ]},
-    {"uprn": 100090062297, "connectivity": "Standalone", "osid": "0b1107e5-00f8-4d89-b6ae-67f0f98a6517",
+    {"uprn": 100090062297, "connectivity": "Free-Standing", "osid": "0b1107e5-00f8-4d89-b6ae-67f0f98a6517",
      "age_updated_date": "2024-03-13",
      "coordinates": [
          [
@@ -159,7 +159,7 @@ expected_properties = [
              ]
          ]
      ]},
-    {"uprn": 100090060430, "connectivity": "End-Connected", "osid": "1384ef24-2e6e-49a2-906f-af35fc12713e",
+    {"uprn": 100090060430, "connectivity": "Dual-Connected", "osid": "1384ef24-2e6e-49a2-906f-af35fc12713e",
      "age_updated_date": "2024-03-13",
      "coordinates": [
          [
