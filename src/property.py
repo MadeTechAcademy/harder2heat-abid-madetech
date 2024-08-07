@@ -13,6 +13,16 @@ class Property:
         self.property_size = None
         self.age_updated_date = None
 
+    @staticmethod
+    def modify_connectivity_description(connectivity_description):
+        correct_descriptions = {
+            'Standalone': 'Free-Standing',
+            'Semi-Detached': 'Single Connected',
+            'End Connected': 'Dual-Connected'
+        }
+
+        return correct_descriptions.get(connectivity_description)
+
     # def calculate_score(self):
     #     score = 0
     #     self.handle_age_string()
