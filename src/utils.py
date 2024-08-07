@@ -3,7 +3,6 @@ from src.property import Property
 def get_properties_from_os(list_of_buildings):
     list_of_properties = []
     for i in range(len(list_of_buildings)):
-        coordinates = list_of_buildings[i]["geometry"]["coordinates"][0][0]
         building = list_of_buildings[i]["properties"]
         uprn_array = building["uprnreference"]
         for j in range(len(uprn_array)):
