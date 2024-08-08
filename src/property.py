@@ -13,8 +13,8 @@ class Property:
         self.size = size
         self.age_updated_date = age_updated_date
 
-    @classmethod
-    def modify_connectivity_description(cls, connectivity_description):
+    @staticmethod
+    def modify_connectivity_description(connectivity_description):
         correct_descriptions = {
             'Standalone': 'Free-Standing',
             'Semi-Connected': 'Single Connected',
