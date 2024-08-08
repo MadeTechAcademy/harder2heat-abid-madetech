@@ -13,15 +13,15 @@ class Property:
         self.size = size
         self.age_updated_date = age_updated_date
 
-    @staticmethod
-    def modify_connectivity_description(connectivity_description):
+    @classmethod
+    def modify_connectivity_description(cls, connectivity_description):
         correct_descriptions = {
             'Standalone': 'Free-Standing',
             'Semi-Connected': 'Single Connected',
             'End-Connected': 'Dual-Connected'
         }
 
-        return correct_descriptions.get(connectivity_description)
+        return correct_descriptions.get(connectivity_description, connectivity_description)
 
     # def calculate_score(self):
     #     score = 0
