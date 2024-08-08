@@ -1,7 +1,7 @@
-MINIMUM_EPC_RATING = "C"
-MINIMUM_FAILING_AGE = 1959
-COLD_CONNECTIVITY = "Standalone"
-WARM_MATERIALS = ["Brick Or Block Or Stone", "Contrete"]
+# MINIMUM_EPC_RATING = "C"
+# MINIMUM_FAILING_AGE = 1959
+# COLD_CONNECTIVITY = "Standalone"
+# WARM_MATERIALS = ["Brick Or Block Or Stone", "Contrete"]
 
 
 class Property:
