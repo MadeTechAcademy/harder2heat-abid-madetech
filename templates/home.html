@@ -25,7 +25,18 @@
             <tr>
 {#                <th scope="row">1</th>#}
                 <td>{{ property.osid }}</td>
-                <td>Dummy data</td>
+                <td>
+                    {% for polygon in property.coordinates %}
+                        <table>
+                            {% for coordinate in polygon %}
+                                <tr>
+                                    <td>Latitude: {{ coordinate[0] }}</td>
+                                    <td>Longitude: {{ coordinate[1] }}</td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    {% endfor %}
+                </td>
                 <td>{{ property.size }}</td>
                 <td>{{ property.age_updated_date }}</td>
                 <td>{{ property.connectivity }}</td>
