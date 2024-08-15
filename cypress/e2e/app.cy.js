@@ -27,4 +27,14 @@ describe('My Flask App', () => {
       });
   });
 
+  it('checks that the second td contains a nested table', () => {
+  cy.get('#properties-table > tbody > tr')
+    .each(($row) => {
+      cy.wrap($row).find('td').eq(1).within(() => {//nested table in 2 column
+        cy.get('table').should('exist');
+      });
+    });
+});
+
+
 })
