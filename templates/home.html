@@ -3,46 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Harder 2 Heat</title>
 </head>
 <body>
-    <p>Properties : {{ properties|length }}</p>
+<p>Properties : {{ properties|length }}</p>
 
-    <table class="table" id="properties-table">
-  <thead>
+<table class="table" id="properties-table">
+    <thead>
     <tr>
-{#      <th scope="col">#</th>#}
-      <th scope="col">OSID</th>
-      <th scope="col">Building Coordinates</th>
-      <th scope="col">Size (square meter)</th>
-      <th scope="col">Building Age Updated Date</th>
-      <th scope="col">Connectivity</th>
+        <th scope="col">OSID</th>
+        <th scope="col">Building Coordinates</th>
+        <th scope="col">Size (square meter)</th>
+        <th scope="col">Building Age Updated Date</th>
+        <th scope="col">Connectivity</th>
     </tr>
-  </thead>
-  <tbody>
-  {% for property in properties %}
-            <tr>
-{#                <th scope="row">1</th>#}
-                <td>{{ property.osid }}</td>
-                <td>
-                    {% for polygon in property.coordinates %}
-                        <table>
-                            {% for coordinate in polygon %}
-                                <tr>
-                                    <td>Latitude: {{ coordinate[0] }}</td>
-                                    <td>Longitude: {{ coordinate[1] }}</td>
-                                </tr>
-                            {% endfor %}
-                        </table>
-                    {% endfor %}
-                </td>
-                <td>{{ property.size }}</td>
-                <td>{{ property.age_updated_date }}</td>
-                <td>{{ property.connectivity }}</td>
-            </tr>
-  {% endfor %}
-  </tbody>
+    </thead>
+    <tbody>
+    {% for property in properties %}
+        <tr>
+            <td>{{ property.osid }}</td>
+            <td>
+                {% for polygon in property.coordinates %}
+                    <table>
+                        {% for coordinate in polygon %}
+                            <tr>
+                                <td>Latitude: {{ coordinate[0] }}</td>
+                                <td>Longitude: {{ coordinate[1] }}</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                {% endfor %}
+            </td>
+            <td>{{ property.size }}</td>
+            <td>{{ property.age_updated_date }}</td>
+            <td>{{ property.connectivity }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
 </table>
 </body>
 </html>
